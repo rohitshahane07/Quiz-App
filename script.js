@@ -12,7 +12,7 @@ const quizeData = [
         b: 'Rohit Sharma',
         c: 'Hardik Pandy',
         d: 'KL. Rahul',
-        correct: 'a',
+        correct: 'b',
     }, {
         question:'What is the most used Prgramming language in 2022?',
         a: 'java',
@@ -22,14 +22,14 @@ const quizeData = [
         correct: 'b'
           
     }, {
-        question: 'Who is the Pricidant of Indai',
+        question: 'Who is the President of India',
         a: 'Rohit Shahane ',
         b: 'Abhi kambale',
         c: 'Narendra Modi',
         d: 'Ajay andhaare',
         correct:'c'
     }, {
-        question:'Who is Royan man',
+        question:'Who is Royal man',
         a: 'Rohit Shahane',
         b: 'Abhi kambale',
         c: 'Ajay Andhare',
@@ -41,6 +41,7 @@ const quizeData = [
         b: 'Hyper language',
         c: 'Hyper markup language',
         d: 'non of the above',
+        correct:'a'
     }
     
 ]
@@ -52,6 +53,7 @@ const d_text =document.getElementById('d_text')
 const submitBtn = document.getElementById('submit')
 
 let currentQuiz =0;
+var score = 0;
 
 loadQuiz()
 
@@ -64,17 +66,21 @@ function loadQuiz() {
     c_text.innerHTML =currentQuizData.c;
     d_text.innerHTML =currentQuizData.d;
     
-  
-
 }
 submitBtn.addEventListener('click', () =>{
+    var temp = document.getElementsByTagName('input')
+
+    for(ele of temp){
+        if(ele.checked == true && ele.value == quizeData[currentQuiz].correct){
+            score++;
+        }
+    }
     currentQuiz++;
     if(currentQuiz<quizeData.length){
         loadQuiz();
-
     }
     else (
-        alert('You fineshed')
+        alert(`${score} out of ${quizeData.length} are correct answers !`)
     )
 
 })
