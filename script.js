@@ -12,7 +12,7 @@ const quizeData = [
         b: 'Rohit Sharma',
         c: 'Hardik Pandy',
         d: 'KL. Rahul',
-        correct: 'a',
+        correct: 'b',
     }, {
         question:'What is the most used Prgramming language in 2022?',
         a: 'java',
@@ -22,14 +22,14 @@ const quizeData = [
         correct: 'b'
           
     }, {
-        question: 'Who is the Pricidant of Indai',
+        question: 'Who is the President of India',
         a: 'Rohit Shahane ',
         b: 'Abhi kambale',
         c: 'Narendra Modi',
         d: 'Ajay andhaare',
         correct:'c'
     }, {
-        question:'Who is Royan man',
+        question:'Who is Royal man',
         a: 'Rohit Shahane',
         b: 'Abhi kambale',
         c: 'Ajay Andhare',
@@ -41,6 +41,7 @@ const quizeData = [
         b: 'Hyper language',
         c: 'Hyper markup language',
         d: 'non of the above',
+        correct:'a'
     }
     
 ]
